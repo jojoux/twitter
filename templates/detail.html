@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,17 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-
-    <h1>Dulce</h1>
-
-   {% for objects in post_list %}
-
-       <a href="{% url 'detail' objects.pk %}">{{objects.titulo}}</a>
+    
+       {{object.titulo}}
+      <br>
+      <p>{{post.descripcion}}</p>
       
-       
-       <hr>
+    
 
-    {% endfor %}
 
 </body>
 </html>
