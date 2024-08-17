@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 from django.views.generic import ListView, DetailView
+from django.views.generic.edit import CreateView
 from .models import Post
 # Create your views here.
 
@@ -15,4 +16,11 @@ class DetailPageView (DetailView):
     model= Post
     template_name= "detail.html"
 
+
+class CreatePageView(CreateView):
+
+    model= Post
+    template_name= "create.html"
+
+    fields=["titulo", "descripcion", "autor"]
     
