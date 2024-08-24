@@ -6,14 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    
-       {{object.titulo}}
-      <br>
-      <p>{{post.descripcion}}</p>
+    <form method="post">
+        {% csrf_token %}
 
-    <a href="{% url 'delete' post.pk  %}">Borrar</a>
-    <a href="{% url 'update' post.pk  %}">Update</a>
+        {{form.as_p}}
 
+        <input type="submit" value="update">
+    </form>
+ 
 
 </body>
 </html>
